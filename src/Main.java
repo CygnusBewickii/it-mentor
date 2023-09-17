@@ -9,22 +9,24 @@ public class Main {
             String operation = calcArgs[1];
             int secondNumber = Integer.parseInt(calcArgs[2]);
             if(!(firstNumber >= 1 && firstNumber <= 10 && secondNumber >= 1 && secondNumber <= 10)) throw new Exception();
+            int result;
             switch (operation) {
                 case "+":
-                    System.out.println(firstNumber + secondNumber);
+                    result = firstNumber + secondNumber;
                     break;
                 case "-":
-                    System.out.println(firstNumber - secondNumber);
+                    result = firstNumber - secondNumber;
                     break;
                 case "*":
-                    System.out.println(firstNumber * secondNumber);
+                    result = firstNumber * secondNumber;
                     break;
                 case "/":
-                    System.out.println((float)firstNumber / (float)secondNumber);
+                    result = firstNumber / secondNumber;
                     break;
                 default:
                     throw new Exception();
             }
+            System.out.println(result);
         }
         catch (Exception exception) {
             System.out.println("trows Exception");
